@@ -1,0 +1,278 @@
+
+body{
+    background-color: #f0f2f5;
+}
+
+.form-style{
+    box-sizing: border-box;
+    padding:1% 2% 0 2%;
+    width:35%;
+    height: fit-content;
+    border:0;
+    margin:5% auto;
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}
+
+.form-style > input{
+    color:gray;
+    box-sizing: border-box;
+    padding-left: 2%;
+}
+.form-style > div,[type="submit"]{
+    cursor: pointer;
+}
+
+.form-profile{
+    margin:10% 30% 0 0;
+}
+
+.title{
+    color:#1877f2;
+    font-size: 3.5em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+.profile-bar{
+    display: none;
+}
+
+/*post*/
+
+.top-post{
+    box-sizing: border-box;
+    width:100%;
+    height: 3em;
+    padding-left:1%;
+    margin-bottom: 1%;
+}
+.username {
+    width:95%;
+    float: left;
+    font-size: 1.2em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: underline;
+    font-style: italic;
+    font-weight: bold;
+}
+.top-post >button{
+	color:black;
+	border:0;
+	width:2%;
+	cursor:pointer;
+}
+.top-post >button{
+    outline: 0;
+}
+.image-post{
+    width: 100%;
+    height: auto;
+}
+
+.post-comment{
+    width: 100%;
+}
+
+.post-comment:focus{
+    outline: 0;
+}
+
+.comment-post{
+    box-sizing: border-box;
+    border:1px solid gray;
+    padding-left: 1%;
+    height: auto;
+}
+.comment-post>p{
+    color:black;
+    word-break:break-all;
+}
+.comment-post>button{
+    float: right;
+    width:3%;
+    margin-right: 1%;
+}
+.comment-post>button:focus{
+    outline: 0;
+}
+.comment-post>h2{
+    width:95%;
+    color:black;
+    font-style: italic;
+    font-weight: bold;
+}
+.comment-div{
+    background-color: #FFF;
+    margin-bottom: 1%;
+}
+
+.btn-comment-post{
+            border: 0;
+            transition: .2s opacity ease-in-out;
+            width:15%;
+            font-size: 1em;
+            height: 2em;
+			font-weight: 600;
+			cursor: pointer;
+			text-align: center;
+			border-radius: 4px;
+			user-select: none;
+			outline: none;
+			touch-action: manipulation;
+            color: #fff;
+            background-color: rgb(129, 140, 248);
+            margin-top: 1%;
+}
+
+/*error validacion para login y errores*/
+.error-validation{
+    text-align: center;
+    overflow-wrap: break-word;
+}
+
+/*
+profile
+*/
+/*break word para divs*/
+.profile-desc{
+    overflow-wrap: break-word;
+}
+/*break word para parrafos*/
+.break-w{
+    word-break: break-all;
+}
+
+
+/*not found page*/
+.not-found > button {
+    font-weight: 300;
+    color: #fff;
+    font-size: 1.2em;
+    text-decoration: none;
+    border: 1px solid #efefef;
+    padding: .5em;
+    border-radius: 3px;
+    float: left;
+    margin: 6em 0 0 -155px;
+    left: 50%;
+    position: relative;
+    transition: all .3s linear;
+  }
+  
+  .not-found > button:hover {
+    background-color: #007aff;
+    color: #fff;
+  }
+  
+  .not-found > p {
+    font-size: 2em;
+    text-align: center;
+    font-weight: 100;
+  }
+  
+  .not-found > h1 {
+    text-align: center;
+    font-size: 15em;
+    font-weight: 100;
+  }
+
+  /*loader*/
+  .loader-container {
+    position:fixed;
+    width:100%;
+    left:0;right:0;top:0;bottom:0;
+    background-color: rgba(255,255,255,0.7);
+    z-index:9999;
+    display:block;
+  }
+  
+  
+  @-webkit-keyframes spin {
+  from {-webkit-transform:rotate(0deg);}
+  to {-webkit-transform:rotate(360deg);}
+  }
+  
+  @keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+  }
+  
+  .loader-container::after {
+    content:'';
+    display:block;
+    position:absolute;
+    left:48%;top:40%;
+    width:40px;height:40px;
+    border-style:solid;
+    border-color:black;
+    border-top-color:transparent;
+    border-width: 4px;
+    border-radius:50%;
+    -webkit-animation: spin .8s linear infinite;
+    animation: spin .8s linear infinite;
+  }
+
+@media screen and (max-width:800px){
+
+    
+    .profile-bar{
+        display: block;
+    }
+
+    .form-style{
+        width: 90%;
+    }
+
+    .form-style > [type="submit"]{
+        cursor: pointer;
+    }
+
+    .title{
+        font-size: 3em;
+    }
+    
+    .btn-comment-post{
+        width:40%;
+        margin-top:3%;
+    }
+    #div-in-responsive{
+        display:none;
+    }
+    .comment-post>h2{
+        width:90%;
+    }
+    .comment-post>button{
+        margin-right: 2%;
+        width:10%;
+    }
+}
+
+@media screen and (max-width:400px){
+
+    .profile-bar{
+        display: block;
+    }
+
+    .form-style{
+        width: 90%;
+    }
+
+    .title{
+        font-size: 2.5em;
+    }
+
+    .btn-comment-post{
+        width:40%;
+        margin-top:3%;
+    }
+    .comment-post>h2{
+        width:90%;
+    }
+    .comment-post>button{
+        margin-right: 2%;
+        width:10%;
+    }
+}
